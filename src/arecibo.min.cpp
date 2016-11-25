@@ -12,7 +12,7 @@ int main()
 {
     ofstream f("arecibo.txt");
 
-    for (i=0; i < 365; i+=5) {
+    for (; i < 365; i+=5) {
         nr=0;
         for (j=0; j < 5; j++) {
             for (k=0; k<366; k++) if (alphabet[k] == data[i+4-j]) break;
