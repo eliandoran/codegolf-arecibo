@@ -4,7 +4,7 @@ int i,j,_[] = {0x15400,0x141404,0x4444b2,0x555524,0,0x600,0x1a00,0x1a00,0x2a00,0
 int main()
 {
     ofstream f("arecibo.txt");
-    for (i=0; i<73; i++) {
+    for (; i<73; i++) {
         for (j=22; j>=0; j--)
             f<<((_[i] >> j) & 1);
         f<<endl;
