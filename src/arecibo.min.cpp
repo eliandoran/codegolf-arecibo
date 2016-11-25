@@ -7,9 +7,7 @@ char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678
 char data[] = "AAKusAB([;AF`ZTAHmdqAAAAAAAAQ@AAA/NAAA/NAABbOAAB^mAAAAAAIt,eAFzx7AJKQ1AK{^aAAAAAAA#cnAAAAAAAf7%AK,fNAAAAAAIr<JAF1rrAJHMsAK{^aAAAAAAA$E{AAA(vAAgkVAK.H8AAA(vABj?hAA$FBAAwU)AAML;AAA,(AAML;AAwU)AA#/uABkhiAC,'RAC,tUABkLAAA#dqAAvwZAByOBABkK;ABnp7ABpjGAAJ!UAIB;dAABWQABk?DABk>?ABm|6AAAAAACoH`ACx7NACn58AAADvAAD;<AAP.xAA3pOABD~PACX,uAEn8pADAKRAC~R+AARHaAAQe+AAP<*AAE0gAFb1P";
 
 int get_ord(char ch) {
-    for (int i=0; i < 366; i++)
-        if (alphabet[i] == ch) return i;
-    return -1;
+    int i=0; for (; i<366; i++) if (alphabet[i] == ch) break; return i;
 }
 
 int pow(int n, int e) {
