@@ -19,11 +19,7 @@ int main()
             nr+=k * pow(91, j);
         }
 
-        for (j=22; j>=0; j--) {
-            int bit = (nr >> j) & 1;
-            f<<bit;
-        }
-
+        for (j=22; j>=0; j--) f<<(nr >> j & 1);
         f<<endl;
     }
 
