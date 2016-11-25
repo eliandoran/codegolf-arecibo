@@ -10,12 +10,7 @@ int get_ord(char ch) {
     int i=0; for (; i<366; i++) if (alphabet[i] == ch) break; return i;
 }
 
-int pow(int n, int e) {
-    int p=1;
-    for (int i=0; i<e; i++)
-        p*=n;
-    return p;
-}
+int pow(int n, int e) { if (e <= 0) return 1; return n * pow(n, e-1); }
 
 int main()
 {
