@@ -12,16 +12,17 @@ int get_ord(char ch) {
 
 int pow(int n, int e) { if (e <= 0) return 1; return n * pow(n, e-1); }
 
+int i,j,nr;
 int main()
 {
     ofstream f("arecibo.txt");
 
-    for (int i=0; i < 365; i+=5) {
-        int nr=0;
-        for (int j=0; j < 5; j++)
+    for (i=0; i < 365; i+=5) {
+        nr=0;
+        for (j=0; j < 5; j++)
             nr+=get_ord(data[i+4-j]) * pow(91, j);
 
-        for (int j=22; j>=0; j--) {
+        for (j=22; j>=0; j--) {
             int bit = (nr >> j) & 1;
             f<<bit;
         }
