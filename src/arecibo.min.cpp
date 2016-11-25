@@ -3,10 +3,6 @@ int i,j,_[]={0x15400,0x141404,0x4444b2,0x555524,0,0x600,0x1a00,0x1a00,0x2a00,0x3
 int main()
 {
     std::ofstream f("arecibo.txt");
-    for (;i<73;i++) {
-        for (j=22;j;j--)
-            f<<(_[i]>>j&1);
-        f<<'\n';
-    }
+    for(;i<73;i++)for(j=22;j;j--)f<<(_[i]>>j&1),f<<'\n';
     return 0;
 }
