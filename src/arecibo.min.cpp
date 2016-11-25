@@ -14,10 +14,8 @@ int main()
 {
     ofstream f("arecibo.txt");
     for (int i=0; i < sizeof(_) / sizeof(int); i++) {
-        for (int j=22; j>=0; j--) {
-            int b = (_[i] >> j) & 1;
-            f<<b;
-        }
+        for (int j=22; j>=0; j--)
+            f<<((_[i] >> j) & 1);
         f<<endl;
     }
     return 0;
