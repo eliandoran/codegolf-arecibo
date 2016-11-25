@@ -6,7 +6,7 @@ int main()
     ofstream f("arecibo.txt");
     for (; i<73; i++) {
         for (j=22; j>=0; j--)
-            f<<((_[i] >> j) & 1);
+            f<<(_[i] >> j & 1);
         f<<endl;
     }
     return 0;
