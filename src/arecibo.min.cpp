@@ -13,15 +13,12 @@ int data[] = {
 int main()
 {
     ofstream f("arecibo.txt");
-
     for (int i=0; i < sizeof(data) / sizeof(int); i++) {
         for (int j=22; j>=0; j--) {
             int bit = (data[i] >> j) & 1;
             f<<bit;
         }
-
         f<<endl;
     }
-
     return 0;
 }
