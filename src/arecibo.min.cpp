@@ -1,5 +1,4 @@
 #include <fstream>
-#include <iostream>
 using namespace std;
 
 char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,./:;<=>?@[]^_`{|}~'";
