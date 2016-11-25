@@ -9,12 +9,12 @@ int _[] = {
     0x1393f,0x5c3837,0x283b,0x10283f,0x102830,0x106c00,0x0,0x1c1000,0x1d4555,0x1c0154,
     0x140,0x7c00,0x1ff00,0x701c0,0xc0060,0x1a00b0,0x330198,0x228288,0x224488,0x22880,
     0x21080,0x20080,0x9400,0x3cfa78
-};
+},i,j;
 int main()
 {
     ofstream f("arecibo.txt");
-    for (int i=0; i < sizeof(_) / sizeof(int); i++) {
-        for (int j=22; j>=0; j--)
+    for (i=0; i < sizeof(_) / sizeof(int); i++) {
+        for (j=22; j>=0; j--)
             f<<((_[i] >> j) & 1);
         f<<endl;
     }
