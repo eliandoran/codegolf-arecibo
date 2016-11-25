@@ -1,6 +1,6 @@
 #include <fstream>
 using namespace std;
-int data[] = {
+int _[] = {
     0x15400,0x141404,0x4444b2,0x555524,0x0,0x600,0x1a00,0x1a00,0x2a00,0x3e00,
     0x0,0x61c618,0x400190,0x68c61a,0x7df7df,0x0,0x80002,0x0,0x40001,0x7c001f,
     0x0,0x618718,0x404010,0x68639a,0x7df7df,0x0,0x81802,0x1800,0x41801,0x7c181f,
@@ -13,10 +13,10 @@ int data[] = {
 int main()
 {
     ofstream f("arecibo.txt");
-    for (int i=0; i < sizeof(data) / sizeof(int); i++) {
+    for (int i=0; i < sizeof(_) / sizeof(int); i++) {
         for (int j=22; j>=0; j--) {
-            int bit = (data[i] >> j) & 1;
-            f<<bit;
+            int b = (_[i] >> j) & 1;
+            f<<b;
         }
         f<<endl;
     }
