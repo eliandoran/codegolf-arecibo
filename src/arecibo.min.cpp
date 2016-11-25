@@ -4,7 +4,7 @@ int main()
 {
     std::ofstream f("arecibo.txt");
     for (;i<73;i++) {
-        for (j=22;j>=0;j--)
+        for (j=22;j;j--)
             f<<(_[i]>>j&1);
         f<<'\n';
     }
