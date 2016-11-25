@@ -17,7 +17,7 @@ Consursul se adreseaza studentilor Universitatii “Lucian Blaga” din Sibiu si
 4.  Reprezentant oficial al sponsorului
 
 ## Enunt:
-Realizați o aplicație care generează în directorul curent fișierul următor: arecibo.txt
+Realizați o aplicație care generează în directorul curent fișierul următor: [output.txt](https://github.com/eliandoran/codegolf-arecibo/blob/master/sample/output.txt)
 
 ## Exemplu de rezolvare
-source.cpp
+[source.cpp](https://github.com/eliandoran/codegolf-arecibo/blob/master/sample/source.cpp)
