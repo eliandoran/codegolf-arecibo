@@ -7,11 +7,15 @@ def main():
             if line[-1] == "\n":
                 line = line[:-1]
 
-            nr = int(line, 2)
-            hex_rep = hex(nr)
+            print(line)
 
-            print(line, '{:10} {}'.format(nr, hex_rep))
-            print(hex_rep, file=output_file, end=',')
+            for startPos in range(0, 23, 6):
+                segment = line[startPos:startPos+6]
+                nr = int(segment, 2)
+                hex_rep = hex(nr)
+                ascii_rep = chr(nr + 35)
+                print("\tSegment {:7}: {:3} {:5} {} ".format(segment, nr, hex_rep, ascii_rep))
+                print(ascii_rep, file=output_file, end='')
 
     print()
 
