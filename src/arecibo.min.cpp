@@ -7,10 +7,8 @@ std::ofstream f("arecibo.txt");
 int main()
 {
     for (int i=0; i<292; i++) {
-        int num = data[i]-35;
-
         for (int j=5-(i % 4 == 3); j>=0; j--)
-            f<<((num >> j) & 1);
+            f<<((data[i]-35 >> j) & 1);
 
         if (i % 4 == 3)
             f<<'\n';
