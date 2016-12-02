@@ -6,7 +6,7 @@ int i, j, z;
 
 int main()
 {
-    for (i=0; i<292; i++) {
+    for (; i<292; i++) {
         z=i % 4 == 3;
         for (j=5-z; j>=0; j--)
             f<<(data[i]-35 >> j & 1);
