@@ -4,14 +4,4 @@ char _[] = "#MC#-%C'E+H5MML'######S##&3##&3##(3##*S#####S[S;C#/3W;S=aaaB####'##%
 std::ofstream f("arecibo.txt");
 int i, j, z;
 
-int main()
-{
-    for (; i<292; i++) {
-        z=i % 4 == 3;
-        for (j=6-z; j; j--)
-            f<<(_[i]-35 >> j-1 & 1);
-
-        if (z)
-            f<<'\n';
-    }
-}
+int main() { for (; i<292; i++) { z=i % 4 == 3; for (j=6-z; j; j--) f<<(_[i]-35 >> j-1 & 1); if (z) f<<'\n'; } }
